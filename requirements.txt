@@ -1,0 +1,7 @@
+keyboard
+pyperclip
+requests
+pystray
+Pillow
+nltk
+lemminflect

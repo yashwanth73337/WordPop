@@ -1,0 +1,12 @@
+# Virtual environment
+wordpop-env/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Runtime-generated files
+wordpop.log
+
+# NLTK data (each user downloads their own copy — no need to commit ~35MB)
+nltk_data/
