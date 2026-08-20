@@ -78,7 +78,15 @@ If you want WordPop to launch automatically every time you log into Windows:
 python install_startup.py
 ```
 
-To undo this later:
+**Important:** this only takes effect on your *next* login — it won't launch WordPop immediately. To start it right now, without waiting to log out and back in, run:
+
+```
+pythonw dictionary_popup.py
+```
+
+From then on, every future login will start it automatically on its own — you won't need to run anything manually again, unless you reboot before ever running it once.
+
+To stop WordPop from auto-starting:
 
 ```
 python uninstall_startup.py
@@ -111,7 +119,7 @@ python uninstall_startup.py
 
 ## Troubleshooting
 
-- **Nothing happens when I press Ctrl+M** — make sure WordPop is actually running (check the system tray). Also check that only one copy is running — WordPop refuses to start a second instance, but if you're unsure, open Task Manager → Details tab and confirm there's only one `python.exe`/`pythonw.exe` for WordPop.
+- **Nothing happens when I press Ctrl+M** — WordPop only responds while it's actually running in the background; it doesn't stay active on its own once closed. Check your system tray (bottom-right, click the `^` arrow if hidden) for the "W" icon. If it's missing, WordPop isn't running — start it with `pythonw dictionary_popup.py` (from inside the project folder, with the venv active). This is expected right after installing the startup shortcut, too — that only takes effect on your *next* login, not immediately. Also check that only one copy is running — WordPop refuses to start a second instance, but if you're unsure, open Task Manager → Details tab and confirm there's only one `python.exe`/`pythonw.exe` for WordPop.
 - **Something seems broken and I can't tell why** — check `wordpop.log`, created automatically in the project folder. It logs errors that would otherwise be silent (since `pythonw.exe` shows no console window).
 - **A word isn't found** — WordPop tries the online API first (if connected), then falls back to WordNet. If a word genuinely isn't in either, you'll see "No definition found." This is more likely for slang, brand-new terms, or narrow technical jargon.
 
