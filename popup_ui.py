@@ -9,8 +9,8 @@ ACCENT_COLOR = "#8ab4f8"
 MUTED_COLOR = "#a0a0a0"
 CLOSE_COLOR = "#ff6b6b"
 
-MARGIN_TOP = 20
-MARGIN_RIGHT = 20
+MARGIN_TOP = 120
+MARGIN_RIGHT = 40
 
 _dpi_aware_done = False
 
