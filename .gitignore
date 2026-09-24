@@ -9,4 +9,4 @@ __pycache__/
 wordpop.log
 
 # NLTK data (each user downloads their own copy — no need to commit ~35MB)
-nltk_data/
+nltk_data/.vscode/
